@@ -1,8 +1,14 @@
-# React-mesto-api-full
+# react-mesto-api-full
+Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
+  
+Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-<p>This is a repository for a project called "Mesto", which includes both the frontend and backend parts of the application. The project features user authentication and registration, as well as operations with cards and users. The backend is located in the backend/ directory, and the frontend is located in the frontend/ directory.</p>
+Адрес репозитория: https://github.com/lu1dgy/react-mesto-api-full-gha
 
-## Project Links
-- IP 51.250.16.131
-- Frontend https://mesto.lapkes.nomoredomains.work/
-- Backend https://api.mesto.lapkes.nomoredomains.work/
+## Ссылки на проект
+
+IP 51.250.16.131
+
+Frontend https://mesto.lapkes.nomoredomains.work/
+
+Backend https://api.mesto.lapkes.nomoredomains.work/

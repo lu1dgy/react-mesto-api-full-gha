@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "frontdeploy": "scp -r ./build/* luidgy@51.250.16.131:/home/luidgy/mesto-frontend"
   },
   "eslintConfig": {
     "extends": [

@@ -36,20 +36,16 @@ function App() {
     about: 'Загрузка...',
     avatar: logo,
   })
-
+  // Проверяем токен
   React.useEffect(() => {
-    if (loggedIn) {
-      api
-        .getData()
-        .then(([user, data]) => {
-          setCurrentUser(user)
-          setCards(data)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-    }
-  }, [loggedIn])
+    checkToken()
+      .then((data) => {
+        setEmailName(data.email)
+        setLoggedIn(true)
+        navigate('/', { replace: true })
+      })
+      .catch((err) => console.log(err))
+  }, [navigate])
 
   const handleLogin = (email, password) => {
     authorize(email, password)
@@ -174,17 +170,21 @@ function App() {
     setisInfoTooltipOpen(false)
     setSelectedCard({})
   }
-  // Проверяем токен
+
   React.useEffect(() => {
-    checkToken()
-      .then((data) => {
-        setEmailName(data.email)
-        setLoggedIn(true)
-        navigate('/', { replace: true })
-      })
-      .catch((err) => console.log(err))
-    // eslint-disable-next-line
-  }, [])
+    if (loggedIn) {
+      api
+        .getData()
+        .then(([user, data]) => {
+          setCurrentUser(user)
+          setCards(data)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
+  }, [loggedIn])
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <Header
