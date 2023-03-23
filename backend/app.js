@@ -5,10 +5,12 @@ const { errors } = require('celebrate');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const rootRouter = require('./routes/index');
+const { login, createUser } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 const { cors } = require('./middlewares/cors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/errorHandler');
+const { loginValidator, registrationValidator } = require('./utils/validators/usersValidator');
 
 const { PORT = 3000, DB_ADDRESS = 'mongodb://0.0.0.0:27017/mestodb' } = process.env;
 
@@ -32,6 +34,8 @@ app.get('/crash-test', () => {
     throw new Error('Сервер сейчас упадёт');
   }, 0);
 });
+
+// Обработчики роутов для пользователей
 
 app.use(auth);
 app.use(rootRouter);
