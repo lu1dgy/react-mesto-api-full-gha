@@ -3,7 +3,6 @@ const token = require('jsonwebtoken');
 const { SECRET_JWT, NODE_ENV } = process.env;
 const { UnauthorizedError } = require('../utils/errors/UnauthorizedError');
 
-// onlu one way to prevent this lint error
 // eslint-disable-next-line consistent-return
 module.exports = (req, _, next) => {
   const { jwt } = req.cookies;
@@ -16,6 +15,6 @@ module.exports = (req, _, next) => {
   } catch (err) {
     return next(new UnauthorizedError('Нужно авторизоваться'));
   }
-  req.user = { _id: payload._id };
-  next();
+  req.user = { _id: payload._id }; // записываем пейлоуд в объект запроса
+  next(); // пропускаем запрос дальше
 };
