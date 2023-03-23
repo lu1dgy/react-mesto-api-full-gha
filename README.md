@@ -4,5 +4,5 @@
 
 ## Project Links
 - IP 51.250.16.131
-- Frontend: https://mesto.lapkes.nomoredomains.work/
-- Backend: https://api.mesto.lapkes.nomoredomains.work/
+- Frontend https://mesto.lapkes.nomoredomains.work/
+- Backend https://api.mesto.lapkes.nomoredomains.work/
