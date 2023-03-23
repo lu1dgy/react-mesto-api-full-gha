@@ -1,0 +1,17 @@
+.header__close-icon {
+  width: 24px;
+  height: 18px;
+  display: none;
+  cursor: pointer;
+}
+
+.header__close-icon:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 375px) {
+  .header__close-icon {
+    display: block;
+    padding-right: 30px;
+  }
+}
