@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "npx eslint .",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "server": "scp -r ./build/* luidgy@51.250.16.131:/home/luidgy/mesto-frontend"
   },
   "keywords": [
     "server",

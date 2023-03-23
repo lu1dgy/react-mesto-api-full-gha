@@ -14,6 +14,7 @@ module.exports = (req, _, next) => {
   } catch (err) {
     return next(new UnauthorizedError('Нужно авторизоваться'));
   }
-  req.user = { _id: payload._id }; // записываем пейлоуд в объект запроса
-  return next(); // пропускаем запрос дальше
+  req.user = { _id: payload._id };
+  next();
+  return 0;
 };
