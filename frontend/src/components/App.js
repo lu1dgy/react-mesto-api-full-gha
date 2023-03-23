@@ -183,7 +183,6 @@ function App() {
         navigate('/', { replace: true })
       })
       .catch((err) => console.log(err))
-    // eslint-disable-next-line
   }, [])
   return (
     <CurrentUserContext.Provider value={currentUser}>
