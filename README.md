@@ -4,7 +4,7 @@ This is a full-stack web application that allows users to upload and share photo
 
 ## Features
 
-- User authentication and authorization using JWT tokens
+- User authentication and authorization using cookies
 - Uploading and deleting photos
 - Updating user profile information
 - Validation of user input using Joi
