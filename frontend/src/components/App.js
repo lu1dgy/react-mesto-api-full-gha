@@ -45,7 +45,7 @@ function App() {
         navigate('/', { replace: true })
       })
       .catch((err) => console.log(err))
-  }, [navigate])
+  }, [loggedIn])
 
   const handleLogin = (email, password) => {
     authorize(email, password)
@@ -64,8 +64,6 @@ function App() {
     register(email, password)
       .then((data) => {
         if (data) {
-          setEmailName(data.email)
-          setLoggedIn(true)
           navigate('/', { replace: true })
           setIsSuccess(true)
         }
