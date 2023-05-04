@@ -1,4 +1,4 @@
-# react-mesto-api-full
+# React-mesto-api-full
 
 This is a full-stack web application that allows users to upload and share photos of their favorite places. The front-end is built using React, while the back-end is powered by Express. The application includes token authentication, and data is stored in a MongoDB database.
 
