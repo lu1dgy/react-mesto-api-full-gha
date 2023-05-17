@@ -64,6 +64,7 @@ function App() {
     register(email, password)
       .then((data) => {
         if (data) {
+          setIsSuccess(true);
           handleLogin(email, password);
         }
       })
